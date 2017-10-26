@@ -5,7 +5,8 @@ PLUGINS = (
     'bookmark', 
     'export', 
     'layout', 
-    'refresh',
+    'refresh', 
+    'sortable', 
     'details',
     'editable', 
     'relate', 
@@ -26,9 +27,7 @@ PLUGINS = (
     'passwords',
     'sitemenu', 
     'language', 
-    'quickfilter',
-    'sortablelist',
-	'importexport'
+    'quickfilter'
 )
 
 
