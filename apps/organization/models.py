@@ -14,6 +14,8 @@ class CityDict(models.Model):
     class Meta:
         verbose_name = '城市'
         verbose_name_plural = verbose_name
+
+
 class CourseOrg(models.Model):
     name = models.CharField(max_length=50, verbose_name='机构名称')
     desc = models.TextField(verbose_name='机构描述')
@@ -26,6 +28,8 @@ class CourseOrg(models.Model):
     class Meta:
         verbose_name = '课程机构'
         verbose_name_plural = verbose_name
+
+
 class Teacher(models.Model):
     org = models.ForeignKey(CourseOrg, verbose_name='所属机构')
     name = models.CharField(max_length=50, verbose_name='教师名')

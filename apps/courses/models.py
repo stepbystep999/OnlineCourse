@@ -22,6 +22,10 @@ class Course(models.Model):
         verbose_name = '课程'
         verbose_name_plural = verbose_name
 
+    def __unicode__(self):
+        return self.name
+
+
 class Lesson(models.Model):
     course = models.ForeignKey(Course, verbose_name='课程')
     name = models.CharField(max_length=100, verbose_name='章节名')
@@ -30,6 +34,7 @@ class Lesson(models.Model):
         verbose_name = '章节'
         verbose_name_plural = verbose_name
 
+
 class Video(models.Model):
     lesson = models.ForeignKey(Lesson, verbose_name='章节')
     name = models.CharField(max_length=100, verbose_name='视频名')
@@ -37,6 +42,7 @@ class Video(models.Model):
     class Meta:
         verbose_name = '视频'
         verbose_name_plural = verbose_name
+
 
 class CourseResource(models.Model):
     course = models.ForeignKey(Course, verbose_name='课程')

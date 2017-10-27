@@ -23,6 +23,7 @@ class UserProfile(AbstractUser):
     def __unicode__(self):    #在print UserProfile的实例时，不定义该函数则无法打印此处的字符串
         return self.username    #继承的AbstractUser.username
 
+
 class EmailVerifyRecord(models.Model):
     code = models.CharField(max_length=20, verbose_name='验证码')
     email = models.EmailField(max_length=50, verbose_name='邮箱')
@@ -33,6 +34,7 @@ class EmailVerifyRecord(models.Model):
         verbose_name_plural = verbose_name
     def __str__(self):
         return '{0}({1})'.format(self.code, self.email)
+
 
 class Banner(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
