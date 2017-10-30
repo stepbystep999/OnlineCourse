@@ -1,3 +1,3 @@
 # OnlineCourse
 
-Python + Django + Xadmin 在建教育平台
+Python + Django + Xadmin 在线教育平台
