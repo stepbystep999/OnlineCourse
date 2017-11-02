@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for OnlineCourse project.
 
@@ -47,8 +48,8 @@ INSTALLED_APPS = [
     "organization",
     "operation",
     "xadmin",
-    "crispy_forms"
-
+    "crispy_forms",
+    "captcha"
 ]
 
 AUTH_USER_MODEL = "users.UserProfile"
@@ -141,3 +142,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, 'static'),
 )
+
+# Email Verify Record
+EMAIL_HOST = "smtp.163.com"    #邮箱smtp服务器地址
+EMAIL_PORT = 25 #邮箱服务器端口，默认25
+EMAIL_HOST_USER = "ttplayer11game@163.com"  #邮箱账号
+EMAIL_HOST_PASSWORD = "ewqazxcds12"
+EMAIL_USE_TLS= False
+EMAIL_FROM = "ttplayer11game@163.com"   #邮件发送者，需与邮箱账号相同
+
