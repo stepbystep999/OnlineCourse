@@ -1,3 +1,3 @@
 # OnlineCourse
 
-Python + Django 在建教育平台
+Python + Django 在线教育平台
